@@ -1,0 +1,128 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding-top: $grid-gutter-width;
+  h1 {
+    text-align: center;
+  }
+  .constellation-grid {
+    margin: auto 0;
+    height: 50%;
+    .grid-item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex: 1;
+      position: fixed;
+      padding: $spacer;
+      &:first-of-type {
+        @include media-breakpoint-up (md) {
+          top: 20%;
+          left: 20%;
+        }
+        top: 58%;
+        left: 46%;
+        z-index: 4;
+        h2 {
+          animation-duration: 10.4s;
+        }
+      }
+      &:nth-of-type(2) {
+        @include media-breakpoint-up(md) {
+          top: 40%;
+          left: 75%;
+        }
+        top: 38%;
+        left: 44%;
+        z-index: 2;
+        h2 {
+          animation-duration: 11.7s;
+        }
+      }
+      &:nth-of-type(3) {
+        @include media-breakpoint-up(md) {
+          top: 63%;
+          left: 25%;
+        }
+        top: 24%;
+        left: 30%;
+        z-index: 1;
+        h2 {
+          animation-duration: 12.3s;
+        }
+      }
+      &:nth-of-type(4) {
+        @include media-breakpoint-up(md) {
+          top: 51%;
+          left: 48%;
+        }
+        top: 42%;
+        left: 10%;
+        z-index: 4;
+        h2 {
+          animation-duration: 9.7s;
+        }
+      }
+      &:nth-of-type(odd) {
+        h2 {
+          animation-direction: alternate;
+        }
+      }
+      h2 {
+        animation: float ease-in-out infinite;
+        transition: .5s ease-out;
+        margin-bottom: 3vh;
+        position: relative;
+        z-index: 4;
+        @media (hover: hover) {
+          &:hover {
+            cursor: pointer;
+            font-size: $h1-font-size;
+            color: $pink;
+          }
+        }
+      }
+      ul {
+        list-style: none;
+        padding-left: 0;
+        opacity: 0;
+        transition: all .4s ease-in-out;
+        li {
+          font-size: max($font-size-base, 1.5vw);
+          color: #a0d0ff;
+          transition: $transition-base;
+          margin-bottom: 0;
+        }
+      }
+      &.active {
+        z-index: 5;
+        opacity: 1;
+        h2 {
+          @include media-breakpoint-up(md) {
+            font-size: $h1-font-size;
+          }
+          color: $pink;
+        }
+        ul {
+          transform: scaleY(1);
+          opacity: 1;
+          li {
+            height: auto;
+            margin-bottom: $spacer * 3;
+          }
+        }
+      }
+    }
+  }
+}
+
+.item-open {
+  .grid-item {
+    @include media-breakpoint-up(md) {
+      opacity: 1;  
+    }
+    opacity: 0;
+  }
+}
