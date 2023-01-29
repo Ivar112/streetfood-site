@@ -7,7 +7,7 @@ $white:    #fff;
 $gray-100: #f8f9fa;
 $gray-200: #e9ecef;
 $gray-300: #dee2e6;
-$gray-400: rgb(202, 205, 232);
+$gray-400: hsl(234, 39%, 85%);
 $gray-500: #adb5bd;
 $gray-600: #6c757d;
 $gray-700: #495057;
@@ -36,12 +36,15 @@ $grays: (
 $blue:    #0d6efd;
 $indigo:  #6610f2;
 $purple:  #6f42c1;
+$pink:    #d63384;
 $red:     #dc3545;
 $orange:  #fd7e14;
 $yellow:  #ffc107;
 $green:   #198754;
+
 $teal:    #20c997;
 $cyan:    #0dcaf0;
+$darkGrayBlue: hsl(237, 14%, 26%);
 // scss-docs-end color-variables
 
 // scss-docs-start colors-map
@@ -294,8 +297,8 @@ $cyans: (
 // fusv-enable
 
 // scss-docs-start theme-color-variables
-$primary:       $blue;
-$secondary:     $gray-600;
+$primary:       $black;
+$secondary:     #c7cdc7;
 $success:       $green;
 $info:          $cyan;
 $warning:       $yellow;
@@ -394,8 +397,8 @@ $position-values: (
 //
 // Settings for the `<body>` element.
 
-$body-bg:                   $gray-800;
-$body-color:                $white;
+$body-bg:                   $white;
+$body-color:                $primary;
 $body-text-align:           null;
 
 // Links
@@ -460,7 +463,7 @@ $container-max-widths: (
 // Set the number of columns and specify the width of the gutters.
 
 $grid-columns:                12;
-$grid-gutter-width:           4rem;
+$grid-gutter-width:           2rem;
 $grid-row-columns:            6;
 
 // Container padding
