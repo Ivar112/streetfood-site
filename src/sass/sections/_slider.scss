@@ -1,0 +1,27 @@
+.swiper {
+  &.foodSwiper {
+    margin: 0 (-$grid-gutter-width*.5) $grid-gutter-width*.75 (-$grid-gutter-width*.5);
+    padding: 0 $grid-gutter-width*.5;
+    .swiper-slide {
+      width: 232px;
+      img {
+        height: 232px;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+        margin-bottom: $spacer;
+      }
+      .food-item-title {
+        margin-bottom: $spacer*.25;
+        font-size: $font-size-base * 1.125;
+        line-height: 1.25;
+        font-weight: $font-weight-semibold;
+      }
+      .delivery-info {
+        font-size: $font-size-base * .75;
+        color: $gray-600;
+        margin-bottom: 0;
+      }
+    }
+  }
+}

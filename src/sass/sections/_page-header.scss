@@ -1,0 +1,14 @@
+.page-header {
+  background-color: $secondary;
+  margin-bottom: $grid-gutter-width*.75;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    height: 300px;
+    width: 100%;
+    bottom: -300px;
+    z-index: -1;
+    background-color: $secondary;
+  }
+}

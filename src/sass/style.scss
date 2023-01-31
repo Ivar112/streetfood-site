@@ -1,5 +1,6 @@
 @import 'bootstrap';
 @import 'global';
-@import 'header';
-@import 'page-header';
+@import 'sections/header';
+@import 'sections/page-header';
+@import 'sections/slider';
 @import '../../node_modules/swiper/swiper';
