@@ -11,7 +11,7 @@
 
     background-color: $secondary;
     padding: $spacer*.875 0;
-    border-bottom: 2px solid rgba($black, .25);
+    border-bottom: 2px solid $border-color;
     &-brand {
       font-weight: $font-weight-bold;
     }

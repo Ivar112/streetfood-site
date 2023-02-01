@@ -44,30 +44,30 @@
     <div class="page-header">
       <div class="container">
         <h1>Help you find Best street food in town</h1>
-        <form action="" class="mobile=form">
+        <form action="" class="mobile-form">
           <legend>Enter your criteria</legend>
           <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown button
+              Select
             </button>
             <div class="dropdown-menu">
               <fieldset>
                 <legend>Food time</legend>
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                  <label class="form-check-label" for="defaultCheck1">
+                  <input class="form-check-input" name="foot-time" type="radio" value="breakfast" id="breakfast">
+                  <label class="form-check-label" for="breakfast">
                     Breakfast
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
-                  <label class="form-check-label" for="defaultCheck2">
+                  <input class="form-check-input" name="foot-time" type="radio" value="lunch" id="lunch">
+                  <label class="form-check-label" for="lunch">
                     Lunch
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
-                  <label class="form-check-label" for="defaultCheck2">
+                  <input class="form-check-input" name="foot-time" type="radio" value="dinner" id="dinner">
+                  <label class="form-check-label" for="dinner">
                     Dinner
                   </label>
                 </div>
@@ -75,20 +75,20 @@
               <fieldset>
                 <legend>Food type</legend>
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                  <label class="form-check-label" for="defaultCheck1">
+                  <input class="form-check-input" name="food-type" type="radio" value="meat" id="meat">
+                  <label class="form-check-label" for="meat">
                     Meat
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
-                  <label class="form-check-label" for="defaultCheck2">
+                  <input class="form-check-input" name="food-type" type="radio" value="veggie" id="veggie">
+                  <label class="form-check-label" for="veggie">
                     Veggie
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
-                  <label class="form-check-label" for="defaultCheck2">
+                  <input class="form-check-input" name="food-type" type="radio" value="vegan" id="vegan">
+                  <label class="form-check-label" for="vegan">
                     Vegan
                   </label>
                 </div>
@@ -96,27 +96,32 @@
               <fieldset>
                 <legend>Budget</legend>
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                  <label class="form-check-label" for="defaultCheck1">
+                  <input class="form-check-input" name="budget" type="radio" value="affordable" id="affordable">
+                  <label class="form-check-label" for="affordable">
                     $$
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
-                  <label class="form-check-label" for="defaultCheck2">
+                  <input class="form-check-input" name="budget" type="radio" value="medium" id="medium">
+                  <label class="form-check-label" for="medium">
                     $$$$
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
-                  <label class="form-check-label" for="defaultCheck2">
+                  <input class="form-check-input" name="budget" type="radio" value="premium" id="premium">
+                  <label class="form-check-label" for="premium">
                     $$$$$$
                   </label>
                 </div>
               </fieldset>
             </div>
           </div>
-          <button type="submit" class="btn btn-primary">Let's find some food for you!</button>
+          <button type="submit" class="btn btn-primary">
+            Let's find some food for you! 
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="20px" fill="#fff">
+              <path d="M264.6 70.63l176 168c4.75 4.531 7.438 10.81 7.438 17.38s-2.688 12.84-7.438 17.38l-176 168c-9.594 9.125-24.78 8.781-33.94-.8125c-9.156-9.5-8.812-24.75 .8125-33.94l132.7-126.6H24.01c-13.25 0-24.01-10.76-24.01-24.01s10.76-23.99 24.01-23.99h340.1l-132.7-126.6C221.8 96.23 221.5 80.98 230.6 71.45C239.8 61.85 254.1 61.51 264.6 70.63z"/>
+            </svg>
+          </button>
         </form>
       </div>
     </div>
@@ -155,30 +160,32 @@
       </div>
     </section>
     <section class="food-curator">
-      <h2>Top Food Curator</h2>
-      <img src="https://thispersondoesnotexist.com/image" height="300px" width="200px" alt="">
-      <h3>Samantha Williams</h3>
-      <span>45 reviews</span>
-      <p>Lorem ipsum dolor sit amit, consectetur adipiscing elit, eiusmod temport 
-        inciddunt ut labore et dolor magna aliqua.
-      </p>
-      <ul>
-        <li>
-          <span>Cynthia Summer</span>
-          <span>45 reviews</span>
-          <img src="https://thispersondoesnotexist.com/image" height="100px" width="100px" alt="">
-        </li>
-        <li>
-          <span>Bryan Smith</span>
-          <span>45 reviews</span>
-          <img src="https://thispersondoesnotexist.com/image" height="100px" width="100px" alt="">
-        </li>
-        <li>
-          <span>Rachel Wise</span>
-          <span>45 reviews</span>
-          <img src="https://thispersondoesnotexist.com/image" height="100px" width="100px" alt="">
-        </li>
-      </ul>
+      <div class="container">
+        <h2>Top Food Curator</h2>
+        <img src="https://thispersondoesnotexist.com/image" height="300px" width="200px" alt="">
+        <h3>Samantha Williams</h3>
+        <span>45 reviews</span>
+        <p>Lorem ipsum dolor sit amit, consectetur adipiscing elit, eiusmod temport 
+          inciddunt ut labore et dolor magna aliqua.
+        </p>
+        <ul>
+          <li>
+            <span>Cynthia Summer</span>
+            <span>45 reviews</span>
+            <img src="https://thispersondoesnotexist.com/image" height="100px" width="100px" alt="">
+          </li>
+          <li>
+            <span>Bryan Smith</span>
+            <span>45 reviews</span>
+            <img src="https://thispersondoesnotexist.com/image" height="100px" width="100px" alt="">
+          </li>
+          <li>
+            <span>Rachel Wise</span>
+            <span>45 reviews</span>
+            <img src="https://thispersondoesnotexist.com/image" height="100px" width="100px" alt="">
+          </li>
+        </ul>
+      </div>
     </section>
   </main>
   <script type="module" src="./app.js"></script>
