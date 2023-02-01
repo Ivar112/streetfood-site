@@ -1,0 +1,67 @@
+.food-curator {
+  h2 {
+    margin-bottom: $spacer*2.25;
+  }
+  .featured-curator {
+    display: flex;
+    gap: $spacer*1.5;
+    border-top: 2px solid $border-color;
+    border-bottom: 2px solid $border-color;
+    padding: $spacer*1.5 0;
+    img {
+      height: 150px;
+      width: 150px;
+      object-fit: cover;
+      object-position: center;
+    }
+    .text {
+      display: flex;
+      flex-direction: column;
+      h3 {
+        font-size: $font-size-base*1.375;
+        font-weight: $font-weight-semibold;
+      }
+      span {
+        color: $gray-600;
+        font-size: $font-size-base;
+      }
+      p {
+        font-size: $font-size-base*.875;
+        margin: auto 0 0 0;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;  
+        overflow: hidden;
+      }
+    }
+  }
+  .curator-list {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    li {
+      display: flex;
+      padding: $spacer 0;
+      .text {
+        display: flex;
+        flex-direction: column;
+        .title {
+          font-size: $font-size-base * 1.0625;
+          font-weight: $font-weight-semibold;
+        }
+        .review-count {
+          color: $gray-600;
+          font-size: $font-size-base*.875;
+        }
+      }
+      img {
+        margin-left: auto;
+        height: 80px;
+        width: 80px;
+      }
+      +li {
+        border-top: 1px solid $border-color;
+      }
+    }
+  }
+}

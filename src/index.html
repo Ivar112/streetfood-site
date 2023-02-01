@@ -16,26 +16,28 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Food Near You</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Categories</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Food Curator</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Stories</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Instagram</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Youtube</a>
-            </li>
-          </ul>
+          <div class="container">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Food Near You</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Categories</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Food Curator</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Stories</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Instagram</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Youtube</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </nav>
@@ -137,7 +139,7 @@
                     height="400px"
                     width="200px">
               <p class="food-item-title">Beef Cheese Burger with vegetables</p>
-              <p class="delivery-info"><span>5 - 10mins </span><span></span><span>0. 2 mi</span></p>
+              <p class="delivery-info"><span>5 - 10mins </span><span class="dot"> &#183; </span><span>0. 2 mi</span></p>
             </div>
             <div class="swiper-slide">
               <img src="https://images.unsplash.com/photo-1655195672061-90c23e3e8026?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=650&q=80"
@@ -145,7 +147,7 @@
                     height="400px"
                     width="200px">
               <p class="food-item-title">Special Beef Sandwich with soft bread</p>
-              <p class="delivery-info"><span>5 - 10mins </span><span></span><span>0. 2 mi</span></p>
+              <p class="delivery-info"><span>5 - 10mins </span><span class="dot"> &#183; </span><span>0. 2 mi</span></p>
             </div>
             <div class="swiper-slide">
               <img src="https://images.unsplash.com/photo-1554306297-0c86e837d24b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=650&q=80"
@@ -153,7 +155,7 @@
                     height="400px"
                     width="200px">
               <p class="food-item-titlle">Beef Cheese Burger with vegetables</p>
-              <p class="delivery-info"><span>5 - 10mins </span><span></span><span>0. 2 mi</span></p>
+              <p class="delivery-info"><span>5 - 10mins </span><span class="dot"> &#183; </span><span>0. 2 mi</span></p>
             </div>
           </div>
         </div>
@@ -162,26 +164,36 @@
     <section class="food-curator">
       <div class="container">
         <h2>Top Food Curator</h2>
-        <img src="https://thispersondoesnotexist.com/image" height="300px" width="200px" alt="">
-        <h3>Samantha Williams</h3>
-        <span>45 reviews</span>
-        <p>Lorem ipsum dolor sit amit, consectetur adipiscing elit, eiusmod temport 
-          inciddunt ut labore et dolor magna aliqua.
-        </p>
-        <ul>
-          <li>
-            <span>Cynthia Summer</span>
+        <div class="featured-curator">
+          <img src="https://thispersondoesnotexist.com/image" height="300px" width="200px" alt="">
+          <div class="text">
+            <h3>Samantha Williams</h3>
             <span>45 reviews</span>
+            <p>Lorem ipsum dolor sit amit, consectetur adipiscing elit, eiusmod temport 
+              inciddunt ut labore et dolor magna aliqua.
+            </p>
+          </div>
+        </div>
+        <ul class="curator-list">
+          <li>
+            <div class="text">
+              <span class="title">Cynthia Summer</span>
+              <span class="review-count">45 reviews</span>
+            </div>
             <img src="https://thispersondoesnotexist.com/image" height="100px" width="100px" alt="">
           </li>
           <li>
-            <span>Bryan Smith</span>
-            <span>45 reviews</span>
+            <div class="text">
+              <span class="title">Bryan Smith</span>
+              <span class="review-count">45 reviews</span>
+            </div>
             <img src="https://thispersondoesnotexist.com/image" height="100px" width="100px" alt="">
           </li>
           <li>
-            <span>Rachel Wise</span>
-            <span>45 reviews</span>
+            <div class="text">
+              <span class="title">Rachel Wise</span>
+              <span class="review-count">45 reviews</span>
+            </div>
             <img src="https://thispersondoesnotexist.com/image" height="100px" width="100px" alt="">
           </li>
         </ul>
