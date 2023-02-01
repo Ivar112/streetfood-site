@@ -1,4 +1,40 @@
 .header {
-  background-color: $secondary;
-  margin-bottom: 3px solid rgba($black, .5);
+  position: fixed;
+  width: 100%;
+  z-index: $zindex-fixed;
+  .navbar {
+    //navbar variables
+    --bs-navbar-color: #{$black};
+    --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, .9%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2.5' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    --bs-navbar-toggler-focus-width: 0;
+    //
+
+    background-color: $secondary;
+    padding: $spacer*.875 0;
+    border-bottom: 2px solid rgba($black, .25);
+    &-brand {
+      font-weight: $font-weight-bold;
+    }
+    &-toggler {
+      transform: scale(.8);
+      border: none;
+      margin-right: -$spacer;
+    }
+    &-collapse {
+      position: fixed;
+      background-color: $secondary;
+      top: 71px;
+      left: 0;
+      z-index: -1;
+      height: 100vh;
+      width: 100%;
+      display: block;
+      padding: $spacer $grid-gutter-width*.5;
+      transition: $transition-base;
+      transform: translateY(-105%);
+      &.show {
+        transform: translateY(0);
+      }
+    }
+  }
 }
