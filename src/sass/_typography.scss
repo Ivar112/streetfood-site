@@ -2,3 +2,10 @@ h1, .h1 {
   font-size: calc(2.5rem + 1.875vw);
   margin-bottom: $spacer*2;
 }
+
+h2 {
+  line-height: 1.5;
+  @include media-breakpoint-up(lg) {
+    font-size: $font-size-base * 2.25;
+  }
+}

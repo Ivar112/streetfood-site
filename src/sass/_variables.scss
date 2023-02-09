@@ -405,7 +405,7 @@ $body-text-align:           null;
 //
 // Style anchor elements.
 
-$link-color:                              hsl(234, 11%, 52%);
+$link-color:                              $primary;
 $link-decoration:                         underline;
 $link-shade-percentage:                   20%;
 $link-hover-color:                        shift-color($link-color, $link-shade-percentage);
@@ -591,7 +591,7 @@ $headings-margin-bottom:      $spacer * .5;
 $headings-font-family:        null;
 $headings-font-style:         null;
 $headings-font-weight:        $font-weight-bold;
-$headings-line-height:        1;
+$headings-line-height:        1.2;
 $headings-color:              null;
 // scss-docs-end headings-variables
 
