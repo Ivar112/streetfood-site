@@ -29,11 +29,31 @@
       height: 100vh;
       width: 100%;
       display: block;
-      padding: $spacer $grid-gutter-width*.5;
+      padding: $spacer*1.5 0;
       transition: $transition-base;
       transform: translateY(-105%);
       &.show {
         transform: translateY(0);
+      }
+      .top-bar {
+        margin-bottom: $spacer*1.5;
+        display: flex;
+        .btn {
+          flex: 1;
+        }
+      }
+      .nav-item {
+        border-top: 1px solid $black;
+        &:last-child {
+          border-bottom: 1px solid $black;
+        }
+        .nav-link {
+          &[target="_blank"] {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512' height='18'%3E%3Cpath d='M296 96c13.3 0 24 10.7 24 24V360c0 13.3-10.7 24-24 24s-24-10.7-24-24V177.9L41 409c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l231-231H56c-13.3 0-24-10.7-24-24s10.7-24 24-24H296z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right center;
+          }
+        }
       }
     }
   }

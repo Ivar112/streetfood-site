@@ -728,8 +728,8 @@ $input-btn-focus-color:         rgba($component-active-bg, $input-btn-focus-colo
 $input-btn-focus-blur:          0;
 $input-btn-focus-box-shadow:    0 0 $input-btn-focus-blur $input-btn-focus-width $input-btn-focus-color;
 
-$input-btn-padding-y-sm:      .25rem;
-$input-btn-padding-x-sm:      .5rem;
+$input-btn-padding-y-sm:      .375rem;
+$input-btn-padding-x-sm:      1.5rem;
 $input-btn-font-size-sm:      $font-size-sm;
 
 $input-btn-padding-y-lg:      .5rem;
@@ -775,7 +775,7 @@ $btn-link-disabled-color:     $gray-600;
 
 // Allows for customizing button radius independently from global border radius
 $btn-border-radius:           0;
-$btn-border-radius-sm:        $border-radius-sm;
+$btn-border-radius-sm:        0;
 $btn-border-radius-lg:        $border-radius-lg;
 
 $btn-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
@@ -1057,7 +1057,7 @@ $zindex-toast:                      1090;
 // Navs
 
 // scss-docs-start nav-variables
-$nav-link-padding-y:                .5rem;
+$nav-link-padding-y:                .55rem;
 $nav-link-padding-x:                1rem;
 $nav-link-font-size:                null;
 $nav-link-font-weight:              null;
