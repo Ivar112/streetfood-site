@@ -46,7 +46,7 @@
     <div class="page-header">
       <div class="container">
         <h1>Help you find Best street food in town</h1>
-        <form action="" class="mobile-form">
+        <form action="" class="order-form">
           <legend>Enter your criteria</legend>
           <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -55,73 +55,100 @@
             <div class="dropdown-menu">
               <fieldset>
                 <legend>Food time</legend>
-                <div class="form-check">
-                  <input class="form-check-input" name="foot-time" type="radio" value="breakfast" id="breakfast">
-                  <label class="form-check-label" for="breakfast">
-                    Breakfast
-                  </label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" name="foot-time" type="radio" value="lunch" id="lunch">
-                  <label class="form-check-label" for="lunch">
-                    Lunch
-                  </label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" name="foot-time" type="radio" value="dinner" id="dinner">
-                  <label class="form-check-label" for="dinner">
-                    Dinner
-                  </label>
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Select food time
+                  </button>
+                  <div class="dropdown-menu">
+                    <div class="form-check">
+                      <input class="form-check-input" name="foot-time" type="radio" value="breakfast" id="breakfast">
+                      <label class="form-check-label" for="breakfast">
+                        Breakfast
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" name="foot-time" type="radio" value="lunch" id="lunch">
+                      <label class="form-check-label" for="lunch">
+                        Lunch
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" name="foot-time" type="radio" value="dinner" id="dinner">
+                      <label class="form-check-label" for="dinner">
+                        Dinner
+                      </label>
+                    </div>
+                  </div>
                 </div>
               </fieldset>
+
               <fieldset>
                 <legend>Food type</legend>
-                <div class="form-check">
-                  <input class="form-check-input" name="food-type" type="radio" value="meat" id="meat">
-                  <label class="form-check-label" for="meat">
-                    Meat
-                  </label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" name="food-type" type="radio" value="veggie" id="veggie">
-                  <label class="form-check-label" for="veggie">
-                    Veggie
-                  </label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" name="food-type" type="radio" value="vegan" id="vegan">
-                  <label class="form-check-label" for="vegan">
-                    Vegan
-                  </label>
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Select food type
+                  </button>
+                  <div class="dropdown-menu">
+                    <div class="form-check">
+                      <input class="form-check-input" name="food-type" type="radio" value="meat" id="meat">
+                      <label class="form-check-label" for="meat">
+                        Meat
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" name="food-type" type="radio" value="veggie" id="veggie">
+                      <label class="form-check-label" for="veggie">
+                        Veggie
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" name="food-type" type="radio" value="vegan" id="vegan">
+                      <label class="form-check-label" for="vegan">
+                        Vegan
+                      </label>
+                    </div>
+                  </div>
                 </div>
               </fieldset>
               <fieldset>
                 <legend>Budget</legend>
-                <div class="form-check">
-                  <input class="form-check-input" name="budget" type="radio" value="affordable" id="affordable">
-                  <label class="form-check-label" for="affordable">
-                    $$
-                  </label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" name="budget" type="radio" value="medium" id="medium">
-                  <label class="form-check-label" for="medium">
-                    $$$$
-                  </label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" name="budget" type="radio" value="premium" id="premium">
-                  <label class="form-check-label" for="premium">
-                    $$$$$$
-                  </label>
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Select budget
+                  </button>
+                  <div class="dropdown-menu">
+                    <div class="form-check">
+                      <input class="form-check-input" name="budget" type="radio" value="affordable" id="affordable">
+                      <label class="form-check-label" for="affordable">
+                        $$
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" name="budget" type="radio" value="medium" id="medium">
+                      <label class="form-check-label" for="medium">
+                        $$$$
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" name="budget" type="radio" value="premium" id="premium">
+                      <label class="form-check-label" for="premium">
+                        $$$$$$
+                      </label>
+                    </div>
+                  </div>
                 </div>
               </fieldset>
             </div>
           </div>
           <button type="submit" class="btn btn-primary">
-            Let's find some food for you! 
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="20px" fill="#fff">
+            <span>
+              Let's find some food for you! 
+            </span>
+            <svg class="arrow-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="20px" fill="#fff">
               <path d="M264.6 70.63l176 168c4.75 4.531 7.438 10.81 7.438 17.38s-2.688 12.84-7.438 17.38l-176 168c-9.594 9.125-24.78 8.781-33.94-.8125c-9.156-9.5-8.812-24.75 .8125-33.94l132.7-126.6H24.01c-13.25 0-24.01-10.76-24.01-24.01s10.76-23.99 24.01-23.99h340.1l-132.7-126.6C221.8 96.23 221.5 80.98 230.6 71.45C239.8 61.85 254.1 61.51 264.6 70.63z"/>
+            </svg>
+            <svg class="arrow-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" height="35px" fill="#000">
+              <path d="M507.3 267.3c6.2-6.2 6.2-16.4 0-22.6l-144-144c-6.2-6.2-16.4-6.2-22.6 0s-6.2 16.4 0 22.6L457.4 240 16 240c-8.8 0-16 7.2-16 16s7.2 16 16 16l441.4 0L340.7 388.7c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0l144-144z"/>
             </svg>
           </button>
         </form>

@@ -3,7 +3,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, auto);
-    column-gap: $spacer*5.5;
+    column-gap: $spacer*1.5;
 
     .text {
       margin-bottom: $spacer * 2;
@@ -16,6 +16,7 @@
         grid-column: 1 / span 1;
         grid-row: 1 / -1;
         margin: auto 0 136px 0;
+        padding-right: $spacer*4.5;
       }
       h2 {
         @include media-breakpoint-up(xl) {

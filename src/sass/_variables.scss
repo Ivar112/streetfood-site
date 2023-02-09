@@ -1135,7 +1135,7 @@ $dropdown-padding-y:                .5rem;
 $dropdown-spacer:                   .125rem;
 $dropdown-font-size:                $font-size-base;
 $dropdown-color:                    $body-color;
-$dropdown-bg:                       $gray-100;
+$dropdown-bg:                      rgba($gray-100, .99);
 $dropdown-border-color:             var(--#{$prefix}border-color-translucent);
 $dropdown-border-radius:            0;
 $dropdown-border-width:             $border-width;
