@@ -4,12 +4,23 @@
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, auto);
     column-gap: $gap;
+    position: relative;
     @include media-breakpoint-up(md) {
-      border-top: 2px solid $border-color;
-      padding: $grid-gutter-width*.5 0;
+      padding: $grid-gutter-width*.5;
+      &::before {
+        content: "";
+        width: calc(100% - #{$grid-gutter-width});
+        height: 2px;
+        background-color: $border-color;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+      }
     }
     @include media-breakpoint-up(lg) {
-      padding: $grid-gutter-width 0;
+      padding: $grid-gutter-width $grid-gutter-width*.5;
     }    
     h2 {
       margin-bottom: $spacer*2;
