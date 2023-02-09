@@ -120,6 +120,7 @@
                 padding: $spacer;
                 &.show {
                   display: block;
+                  top: 10px !important;
                 }
               }
             }
