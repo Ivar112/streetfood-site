@@ -1,5 +1,8 @@
 body {
   main {
     padding: 74px 0 $spacer 0;
+    @include media-breakpoint-up(lg) {
+      padding-top: 216px;
+    }
   }
 }

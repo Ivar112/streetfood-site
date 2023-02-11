@@ -12,8 +12,16 @@
     background-color: $secondary;
     padding: $spacer*.875 0;
     border-bottom: 2px solid $border-color;
+    @include media-breakpoint-up(lg) {
+      border-bottom: 0;
+    }
     &-brand {
       font-weight: $font-weight-bold;
+      @include media-breakpoint-up(lg) {
+        position: absolute;
+        top: $spacer*2.25;
+        z-index: 1;
+      }
     }
     &-toggler {
       transform: scale(.8);
@@ -35,23 +43,62 @@
       &.show {
         transform: translateY(0);
       }
-      .top-bar {
-        margin-bottom: $spacer*1.5;
-        display: flex;
-        .btn {
-          flex: 1;
-        }
+      @include media-breakpoint-up (lg) {
+        transform: translateY(0);
+        position: static;
+        height: auto;
+        z-index: 0;
       }
-      .nav-item {
-        border-top: 1px solid $black;
-        &:last-child {
-          border-bottom: 1px solid $black;
+      .container {
+        @include media-breakpoint-up(lg) {
+          padding: 0;
         }
-        .nav-link {
-          &[target="_blank"] {
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512' height='18'%3E%3Cpath d='M296 96c13.3 0 24 10.7 24 24V360c0 13.3-10.7 24-24 24s-24-10.7-24-24V177.9L41 409c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l231-231H56c-13.3 0-24-10.7-24-24s10.7-24 24-24H296z'/%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-position: right center;
+        .top-bar {
+          margin-bottom: $spacer*1.5;
+          display: flex;
+          justify-content: flex-end;
+          @include media-breakpoint-up(lg){
+            margin-bottom: $spacer*1.25;
+          }
+          .btn {
+            flex: 1;
+            @include media-breakpoint-up(lg) {
+              flex: 0 1 auto;
+            }
+          }
+        }
+        .navbar-nav {
+          @include media-breakpoint-up(lg) {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, auto);
+            column-gap: $spacer*1.25;
+          }
+          .nav-item {
+            border-top: 1px solid $black;
+            &:last-child {
+              border-bottom: 1px solid $black;
+              @include media-breakpoint-up(lg) {
+                border-bottom: none;
+              }
+            }
+            &:nth-of-type(even) {
+              grid-row: 1;
+            }
+            &:nth-of-type(odd) {
+              grid-row: 2;
+            }
+            &:first-child,
+            &:nth-child(2) {
+              grid-column: 1 / span 2;
+            }
+            .nav-link {
+              &[target="_blank"] {
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512' height='18'%3E%3Cpath d='M296 96c13.3 0 24 10.7 24 24V360c0 13.3-10.7 24-24 24s-24-10.7-24-24V177.9L41 409c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l231-231H56c-13.3 0-24-10.7-24-24s10.7-24 24-24H296z'/%3E%3C/svg%3E");
+                background-repeat: no-repeat;
+                background-position: right center;
+              }
+            }
           }
         }
       }

@@ -3,6 +3,9 @@
   margin-bottom: $grid-gutter-width*.75;
   position: relative;
   padding-top: $grid-gutter-width*.75;
+  @include media-breakpoint-up(lg) {
+    padding-top: $spacer*.5;
+  }
   &::after {
     content: "";
     position: absolute;
