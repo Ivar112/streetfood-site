@@ -4,5 +4,16 @@ body {
     @include media-breakpoint-up(lg) {
       padding-top: 216px;
     }
+
+    .arrow-btn {
+      svg {
+        transition: $transition-base;
+      }
+      &:hover {
+        svg {
+          transform: translateX(5px);
+        }
+      }
+    }
   }
 }

@@ -107,15 +107,9 @@
             font-weight: $font-weight-semibold;
             svg {
               vertical-align: text-top;
-              transition: $transition-base;
             }
             &:first-child {
               margin-right: $spacer;
-            }
-          }
-          &:hover {
-            svg {
-              transform: translateX(5px);
             }
           }
         }
