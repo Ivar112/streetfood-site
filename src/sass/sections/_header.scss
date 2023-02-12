@@ -2,6 +2,16 @@
   position: fixed;
   width: 100%;
   z-index: $zindex-fixed;
+  &:after {
+    content: "";
+    display: block;
+    width: 100%;
+    box-shadow: 0 0 10px 8px $border-color;
+    transition: $transition-base;
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+  }
   .navbar {
     //navbar variables
     --bs-navbar-color: #{$black};
@@ -12,15 +22,20 @@
     background-color: $secondary;
     padding: $spacer*.875 0;
     border-bottom: 2px solid $border-color;
+    transition: $transition-base;
     @include media-breakpoint-up(lg) {
       border-bottom: 0;
     }
     &-brand {
       font-weight: $font-weight-bold;
+      transition: $transition-base;
       @include media-breakpoint-up(lg) {
         position: absolute;
         top: $spacer*2.25;
         z-index: 1;
+        .fill-menu & {
+          top: $spacer*.5;
+        }
       }
     }
     &-toggler {
@@ -48,6 +63,9 @@
         position: static;
         height: auto;
         z-index: 0;
+        .fill-menu & {
+          padding: 0;
+        }
       }
       .container {
         @include media-breakpoint-up(lg) {
@@ -59,6 +77,9 @@
           justify-content: flex-end;
           @include media-breakpoint-up(lg){
             margin-bottom: $spacer*1.25;
+            .fill-menu & {
+              margin-bottom: $spacer*.5;
+            }
           }
           .btn {
             flex: 1;
@@ -102,6 +123,14 @@
           }
         }
       }
+    }
+  }
+  .fill-menu & {
+    &::after {
+      opacity: 1;
+    }
+    .navbar {
+      padding: $spacer*.5 0;
     }
   }
 }

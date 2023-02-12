@@ -1,6 +1,7 @@
 import bootstrap from 'bootstrap';
 import Swiper from 'swiper';
 
+
 (function() {
 
   'use strict';
@@ -50,3 +51,11 @@ import Swiper from 'swiper';
 
 
 })();
+
+window.addEventListener('scroll', function() {
+  if (window.scrollY > 50 ) {
+    document.body.classList.add('fill-menu');
+  } else {
+    document.body.classList.remove('fill-menu');
+  }
+})
