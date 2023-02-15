@@ -93,7 +93,7 @@
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             grid-template-rows: repeat(2, auto);
-            column-gap: $spacer*1.25;
+            column-gap: $gap;
           }
           .nav-item {
             border-top: 1px solid $black;

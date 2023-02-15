@@ -37,7 +37,7 @@
     }
     .featured-curator {
       display: flex;
-      gap: $spacer*1.5;
+      gap: $gap;
       border-top: 2px solid $border-color;
       border-bottom: 2px solid $border-color;
       padding: $spacer*1.5 0;
@@ -49,7 +49,6 @@
         border-top: none;
         padding: 0 0 $grid-gutter-width*.5 0;
         display: flex;
-        gap: $spacer*1.25;
       }
       @include media-breakpoint-up(lg) {
         border: none;
