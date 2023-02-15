@@ -19,4 +19,30 @@ body {
   &.menu-open {
     overflow: hidden;
   }
+
+  &.dark {
+    --bs-body-bg: #{$gray-700};
+    --bs-body-color: #{$gray-200};
+    --bs-secondary: #545853;
+    --bs-gray-600: #{$gray-500};
+    --bs-link-color: var(--bs-body-color);
+    --bs-link-hover-color: var(--bs-body-color);
+    --bs-border-color: #ffffff4b;
+    .btn-secondary {
+      --bs-btn-bg: #545853;
+      --bs-btn-border-color: #545853;
+      --bs-btn-color: #{$gray-200};
+    }
+    .dropdown-menu {
+      --bs-dropdown-color: var(--bs-body-color);
+      --bs-dropdown-bg: #252525;
+      --bs-border-color-translucent: var(--bs-gray-300);
+    } 
+    svg {
+      fill: var(--bs-body-color);
+    }
+    .navbar {
+      --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, .9%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2.5' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");;
+    }
+  }
 }

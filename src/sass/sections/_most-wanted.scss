@@ -97,7 +97,7 @@
             }
             .delivery-info {
               font-size: $font-size-base * .875;
-              color: $gray-600;
+              color: var(--bs-gray-600);
               margin-bottom: 0;
               .dot {
                 font-size: $font-size-base;

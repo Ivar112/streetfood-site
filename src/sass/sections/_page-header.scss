@@ -1,5 +1,5 @@
 .page-header {
-  background-color: $secondary;
+  background-color: var(--bs-secondary);
   margin-bottom: $grid-gutter-width*.75;
   position: relative;
   padding-top: $grid-gutter-width* .75;
@@ -13,7 +13,7 @@
     height: 100px;
     width: 100%;
     z-index: -1;
-    background-color: $secondary;
+    background-color: var(--bs-secondary);
   }
   &::after {
     content: "";
@@ -21,7 +21,7 @@
     height: 300px;
     width: 100%;
     z-index: -1;
-    background-color: $secondary;
+    background-color: var(--bs-secondary);
     @include media-breakpoint-up(xl) {
       height: 130px;
     }
@@ -43,7 +43,7 @@
     }
     .dropdown {
       margin-bottom: $spacer*.75;
-      border-bottom: 3px solid $black;
+      border-bottom: 3px solid var(--bs-body-color);
       grid-row: 2;
       grid-column: 1 / -1;
       @include media-breakpoint-up(xl) {
@@ -52,14 +52,16 @@
       }
       &-toggle {
         padding: 0 0 $spacer 0;
-        color: rgba($black, .5);
+        color: rgba(var(--bs-btn-color), .5);
         font-weight: $font-weight-semibold;
         position: relative;
+        border-color: transparent;
+        background-color: transparent;
         &:active,
         &:hover,
         &.show {
           background-color: initial;
-          border-color: $secondary;
+          border-color: transparent;
         }
         &::after {
           position: absolute;
@@ -69,6 +71,9 @@
           width: $spacer;
           background-repeat: no-repeat;
           background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3C!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --%3E%3Cpath d='M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z'/%3E%3C/svg%3E");
+          .dark & {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23e9ecef' viewBox='0 0 512 512'%3E%3C!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --%3E%3Cpath d='M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z'/%3E%3C/svg%3E");
+          }
         }
         @include media-breakpoint-up(lg) {
           display: none;
@@ -130,7 +135,7 @@
               @include media-breakpoint-up(lg) {
                 display: none;
                 position: absolute;
-                background-color: $dropdown-bg;
+                background-color: var(--bs-dropdown-bg);
                 padding: $spacer;
                 &.show {
                   display: block;
@@ -188,6 +193,8 @@
         }
         &:not(.dropdown-toggle) {
           border-width: 0 0 3px 0;
+          border-color: var(--bs-body-color);
+          transition: transform .2s ease-in-out;
         }
       }
       svg {

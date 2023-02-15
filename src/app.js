@@ -63,3 +63,7 @@ window.addEventListener('scroll', function() {
 document.querySelector('.navbar-toggler').addEventListener('click', function() {
   document.body.classList.toggle('menu-open');
 })
+
+document.querySelector('.dark-mode-toggle').addEventListener('click', function() {
+  document.body.classList.toggle('dark');
+})

@@ -14,27 +14,62 @@
   }
   .navbar {
     //navbar variables
-    --bs-navbar-color: #{$black};
+    --bs-navbar-color: #{var(--bs-body-color)};
     --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, .9%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2.5' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
     --bs-navbar-toggler-focus-width: 0;
     //
 
-    background-color: $secondary;
+    background-color: var(--bs-secondary);
     padding: $spacer*.875 0;
-    border-bottom: 2px solid $border-color;
-    transition: $transition-base;
+    border-bottom: 2px solid var(--bs-border-color);
+    transition: $transition-base, background-color none;
     @include media-breakpoint-up(lg) {
       border-bottom: 0;
+    }
+    .container {
+      position: relative;
     }
     &-brand {
       font-weight: $font-weight-bold;
       transition: $transition-base;
+      color: var(--bs-body-color);
       @include media-breakpoint-up(lg) {
         position: absolute;
-        top: $spacer*2.25;
+        top: $spacer*1.375;
         z-index: 1;
         .fill-menu & {
-          top: $spacer*.5;
+          top: -$spacer * .125;
+        }
+      }
+    }
+    .dark-mode-toggle {
+      position: absolute;
+      left: 160px;
+      top: px;
+      z-index: 1;
+      display: grid;
+      transition: $transition-base;
+      @include media-breakpoint-up(lg) {
+        top: 35px;
+        left: 192px;
+      }
+      .fill-menu & {
+        top: 14px;
+        @include media-breakpoint-up(lg) {
+          top: 10px;
+        }
+      }
+      svg {
+        grid-row: 1;
+        grid-column: 1;
+        &:last-of-type {
+          display: none;
+        }
+        .dark & {
+          display: none;
+          &:last-of-type {
+            display: block;  
+          }
         }
       }
     }
@@ -45,7 +80,7 @@
     }
     &-collapse {
       position: fixed;
-      background-color: $secondary;
+      background-color: var(--bs-secondary);
       top: 74px;
       left: 0;
       z-index: -1;
@@ -53,10 +88,13 @@
       width: 100%;
       display: block;
       padding: $spacer*1.5 0;
-      transition: $transition-base;
+      transition: $transition-base, background-color 0s;
       transform: translateY(-105%);
       &.show {
         transform: translateY(0);
+      }
+      .fill-menu & {
+        top: 62px;
       }
       @include media-breakpoint-up (lg) {
         transform: translateY(0);
@@ -75,6 +113,7 @@
           margin-bottom: $spacer*1.5;
           display: flex;
           justify-content: flex-end;
+          position: relative;
           @include media-breakpoint-up(lg){
             margin-bottom: $spacer*1.25;
             .fill-menu & {
@@ -96,9 +135,9 @@
             column-gap: $gap;
           }
           .nav-item {
-            border-top: 1px solid $black;
+            border-top: 1px solid var(--bs-body-color);
             &:last-child {
-              border-bottom: 1px solid $black;
+              border-bottom: 1px solid var(--bs-body-color);
               @include media-breakpoint-up(lg) {
                 border-bottom: none;
               }
@@ -120,6 +159,7 @@
               }
             }
             .nav-link {
+              color: var(--bs-body-color);
               &[target="_blank"] {
                 background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512' height='18'%3E%3Cpath d='M296 96c13.3 0 24 10.7 24 24V360c0 13.3-10.7 24-24 24s-24-10.7-24-24V177.9L41 409c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l231-231H56c-13.3 0-24-10.7-24-24s10.7-24 24-24H296z'/%3E%3C/svg%3E");
                 background-repeat: no-repeat;
@@ -131,6 +171,9 @@
                   svg {
                     opacity: .8;
                   }
+                }
+                .dark &{
+                  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512' fill='%23fff' height='18'%3E%3Cpath d='M296 96c13.3 0 24 10.7 24 24V360c0 13.3-10.7 24-24 24s-24-10.7-24-24V177.9L41 409c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l231-231H56c-13.3 0-24-10.7-24-24s10.7-24 24-24H296z'/%3E%3C/svg%3E");
                 }
               }
             }
