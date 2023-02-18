@@ -215,4 +215,9 @@
       padding: $spacer*.5 0;
     }
   }
+  .menu-open & {
+    &::after {
+      opacity: 0;
+    }
+  }
 }
